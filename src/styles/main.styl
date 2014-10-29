@@ -1,3 +1,99 @@
 html
-	font-size: 15px
-	font-family: sans-serif
+  font-size: 15px
+  font-family: sans-serif
+
+main,
+body > footer
+  max-width: 1024px
+  margin: 0 auto
+
+/* Header */
+body > header 
+  width: 100vw
+  height: 100vh
+  position: relative
+
+body > header .audio-network-logo
+  max-width: 128px
+  position: absolute
+  right: 40px
+  bottom: 50px
+
+.main-nav
+  width: 100%
+  position: fixed
+  top: 0
+  background: rgba(255,255,255,0.5)
+  z-index: 1
+  transform: translateY(-100%)
+  transition: all 300ms
+
+.main-nav.show
+  transform: translateY(0)
+
+.main-nav .audio-network-logo
+  width: 95px
+
+/* artist */
+.artist
+  display: flex
+  position: relative
+  box-sizing: border-box
+  padding: 60px 0 80px 0
+
+.artist:nth-child(odd)
+  flex-direction: row-reverse
+
+.artist:nth-child(odd) .artist-about
+  padding: 0 108px 0 12px
+
+.artist-picture
+  position: absolute
+  top: 0
+  right: 0
+  z-index: -1
+  max-width: 100%
+
+.artist:nth-child(odd) .artist-picture
+  left: 0
+
+.artist-about,
+.artist-music
+  box-sizing: border-box
+
+
+.artist-about
+  max-width: 44.4%
+  padding: 0 12px 0 108px 
+
+.artist-music
+  max-width: 55.6%
+  padding: 0 40px
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+
+.artist-quote
+  text-align: center
+  font-size: 3.3em
+
+.artist-quote:before, 
+.artist-quote:after
+  content: '"'
+  display: block
+
+/* Footer */
+
+.more-undiscovered
+  list-style: none
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+
+.footer-content
+  max-width: 680px
+  margin: 0 auto
+  display: flex
+  border-top: 1px solid white
+  padding: 35px 0
+
