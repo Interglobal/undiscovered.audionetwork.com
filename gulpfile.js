@@ -129,3 +129,6 @@ gulp.task('watch', function() {
 
 /*DEFAULT TASK*/
 gulp.task('default', ['connect', 'watch']);
+
+/* Build Task */
+gulp.task('build', ['html', 'styles', 'script', 'lib', 'images', 'fonts']);
