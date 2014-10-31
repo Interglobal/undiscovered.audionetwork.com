@@ -40,6 +40,11 @@ table
   border-collapse: collapse
   border-spacing: 0
 
+// UTILITY
+
+.u-pointer:hover
+  cursor: pointer
+
 // TYPOGRAPHY
 
 @font-face
@@ -57,53 +62,93 @@ table
   font-style: normal
 
 html
-  font-size: 1em
+  font-size: 15px
   line-height: 1.4em
   font-family: sans-serif
 
 .font-neue
   font-family: 'neue_droschke'
+  letter-spacing: 0.06em
 
 .font-geogrot
   font-family: 'geogrotesque-thin'
 
+h1, h2, h3, h4 , h5, h6
+  font-weight: normal
+
 h1
   font-size: 3em
+  line-height: 1.6em
 
 h2
-  font-size: 2em
+  font-size: 2.2em
+  line-height: 1.3em
+
+.font-underline
+  border-bottom: 4px solid black
+  display: inline-block
 
 h3
   font-size: 1.6em
+  line-height: 1.4em
 
 p
   margin-bottom: 1em
 
+// LINKS
+a
+  color: inherit
+  text-decoration: none
 
 // STRUCTURE
-
 main,
-body > footer
+.container
   max-width: 1024px
   margin: 0 auto
+
+.background
+  background-image: url(/img/UD_BG.png)
+  background-position: center center
+  background-size: cover
+  color: white
 
 // HEADER
 #header
   width: 100vw
   height: 100vh
   position: relative
-  background-image: url(/img/bg-lo.png)
-  background-position: center center
-  background-size: cover
-  color: white
 
-#header .audio-network-logo
-  max-width: 128px
+#header-middle
+  max-width: 80%
+  margin: 0 auto
+  text-align: center
+
+#logo-undiscovered-subheading
+  padding: 0.7em 1em
+  border: 1px solid white
+  display: inline-block
+
+#header-bottom
+  position: relative
+  text-align: center
+  .logo-audionetwork
+    position: absolute
+    right: 10px
+    top: 0px
+
+#header-number
   position: absolute
-  right: 40px
-  bottom: 50px
+  left: 10px
+  top: 0px
+  h2
+    font-size: 6em
 
-.main-nav
+.logo-audionetwork
+  max-width: 200px
+
+
+// NAV AFTER HEADER
+#nav-main
   width: 100%
   position: fixed
   top: 0
@@ -111,13 +156,25 @@ body > footer
   z-index: 1
   transform: translateY(-100%)
   transition: all 300ms
+  .logo-audionetwork
+    width: 95px
 
-.main-nav.show
+#nav-main.show
   transform: translateY(0)
 
-.main-nav .audio-network-logo
-  width: 95px
 
+// FIXED SCROLLING NAV
+#nav-scroll
+  z-index: 999
+  position: fixed
+  right: 20px
+  top: 30%
+  font-size: 1em
+  li
+    padding: 0.5em 0
+    text-align: center
+    &.scroll-arrow
+      font-size: 0.5em
 
 // ARTIST
 .artist
@@ -146,10 +203,23 @@ body > footer
 .artist-music
   box-sizing: border-box
 
-
 .artist-about
   max-width: 44.4%
   padding: 0 12px 0 108px
+
+.artist-header
+  text-align: center
+  margin-bottom: 2em
+
+.artist-read-more
+  display: block
+  text-align: right
+  font-size: 1.1em
+  text-decoration: underline
+  &::after
+    content: "\2192"
+    margin-left: 0.5em
+    text-decoration: none
 
 .artist-music
   max-width: 55.6%
@@ -160,23 +230,35 @@ body > footer
 
 .artist-quote
   text-align: center
-  &:before, &:after
+  font-size: 2em
+  &:before
     content: '"'
     display: block
+    font-size: 2em
+    line-height: 0.1em
+  &:after
+    content: '"'
+    display: block
+    font-size: 2em
+    line-height: 1.1em
 
 
 // FOOTER
 
-.more-undiscovered
+#more-undiscovered
   list-style: none
   display: flex
   flex-flow: row wrap
   justify-content: space-between
 
-.footer-content
+#footer-content
   max-width: 680px
   margin: 0 auto
   display: flex
   border-top: 1px solid white
   padding: 35px 0
 
+#footer-contact
+  text-align: center
+  box-sizing: border-box
+  border: 1px solid white
