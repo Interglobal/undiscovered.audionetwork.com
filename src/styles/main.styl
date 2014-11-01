@@ -263,20 +263,57 @@ a
 
 // FOOTER
 
+#footer .container
+  max-width: 860px
+  padding: 0 20px
+
+#more-undiscovered li
+    max-width: 45%
+
+#more-undiscovered img
+  max-width: 100%
+  margin-bottom: 30px
+
+@media  only screen and (min-width: 840px )
+  #more-undiscovered img
+      max-width: 192px
+  
+
 #more-undiscovered
   list-style: none
   display: flex
   flex-flow: row wrap
-  justify-content: space-between
+  justify-content: space-around
 
 #footer-content
+  font-size: 0.9rem
   max-width: 680px
   margin: 0 auto
   display: flex
-  border-top: 1px solid white
+  border-top: 2px solid white
   padding: 35px 0
+  flex-wrap: wrap
+  justify-content: space-between
+
+@media  only screen and (min-width: 840px )
+  #footer-content
+    flex-wrap: nowrap
+
+#footer-content > *
+  max-width: 100%
+
+@media  only screen and (min-width: 840px )
+  #footer-content > * 
+    max-width: 48%
 
 #footer-contact
+  padding: 10px 15px
   text-align: center
   box-sizing: border-box
   border: 1px solid white
+
+#footer-contact h3 
+  font-size: 2.6em
+  border-bottom: 2px solid white
+  margin-bottom: 15px
+  padding-bottom: 5px
