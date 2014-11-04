@@ -1,7 +1,7 @@
 // VARIABLES
 
 $yellow = yellow
-
+$margin-basic = 25px
 
 // RESET
 
@@ -43,10 +43,12 @@ table
   border-collapse: collapse
   border-spacing: 0
 
+
 // UTILITY
 
 .u-pointer:hover
   cursor: pointer
+
 
 // TYPOGRAPHY
 
@@ -98,12 +100,16 @@ h3
 p
   margin-bottom: 1em
 
+
 // LINKS
+
 a
   color: inherit
   text-decoration: none
 
+
 // STRUCTURE
+
 .container
   max-width: 1024px
   margin: 0 auto
@@ -114,7 +120,9 @@ a
   background-size: cover
   color: white
 
+
 // HEADER
+
 #header
   width: 100%
   height: 100vh
@@ -164,6 +172,7 @@ a
 
 
 // NAV AFTER HEADER
+
 #nav-main
   width: 100%
   position: fixed
@@ -180,6 +189,7 @@ a
 
 
 // FIXED SCROLLING NAV
+
 #nav-scroll
   z-index: 999
   position: fixed
@@ -194,7 +204,9 @@ a
     &.active
       color: $yellow
 
+
 // ARTIST
+
 .artist
   display: flex
   position: relative
@@ -277,7 +289,6 @@ a
 @media  only screen and (min-width: 840px )
   #more-undiscovered img
       max-width: 192px
-  
 
 #more-undiscovered
   list-style: none
@@ -303,7 +314,7 @@ a
   max-width: 100%
 
 @media  only screen and (min-width: 840px )
-  #footer-content > * 
+  #footer-content > *
     max-width: 48%
 
 #footer-contact
@@ -312,8 +323,54 @@ a
   box-sizing: border-box
   border: 1px solid white
 
-#footer-contact h3 
+#footer-contact h3
   font-size: 2.6em
   border-bottom: 2px solid white
   margin-bottom: 15px
   padding-bottom: 5px
+
+
+// RESPONSIVE
+
+@media only screen and (max-width: 1024px)
+
+  html
+    font-size: 14px
+
+@media only screen and (max-width: 600px)
+
+  #nav-scroll
+    display: none
+
+  #header-number
+    font-size: 4em
+
+  .logo-audionetwork
+    max-width: 140px
+
+  .artist
+    flex-direction: column !important
+    padding: 0
+
+  .artist-picture
+    display: block
+    position: relative
+    height: auto
+    padding-bottom: $margin-basic
+
+  .artist-about
+    max-width: 100% !important
+    padding: 0 !important
+    margin: 0 auto !important
+    width: 90% !important
+
+  .artist-music
+    display: block
+    max-width: 100%
+    width: 90%
+    padding: 0
+    margin: 0 auto $margin-basic auto
+    text-align: center
+
+  .artist-quote
+    display: none

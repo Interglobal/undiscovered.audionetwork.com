@@ -5,31 +5,30 @@ function l(data) {
 var activeScrollBlock;
 var scrollBlocksLength = $('.content-block').length;
 
+var windowHeight = $(window).height();
+
+function layout() {
+  $('.content-block').css('min-height', windowHeight+'px');
+}
+
 $(document).ready(function () {
 
-  $('.content-block').waypoint(function(direction) {
-/*
-    var data = {
-      "direction": direction,
-      "this": $(this),
-      "id": this.id,
-      "index": $(this).index()
-    };
-    l(data);
-*/
+  layout();
+  $(window).resize(function() {
+    windowHeight = $(window).height();
+    layout();
+  });
 
+  $('.content-block').waypoint(function(direction) {
     if (direction === 'down') {
       activeScrollBlock = $(this).index();
     }
     $('.js-scroll').eq($(this).index()).toggleClass('active', direction === 'down');
-
   }, { offset: '66%' }).waypoint(function(direction) {
-
     if (direction === 'up') {
       activeScrollBlock = $(this).index();
     }
     $('.js-scroll').eq($(this).index()).toggleClass('active', direction === 'up');
-
   }, { offset: function() {
     return -$(this).height();
   }});
@@ -37,6 +36,7 @@ $(document).ready(function () {
 });
 
 $('.js-scroll').click(function() {
+// refactor this with eqs now
   var target = $(this).data('scroll');
   if (target === 'header') {
     $('#header').ScrollTo();
@@ -45,23 +45,23 @@ $('.js-scroll').click(function() {
   } else {
     $('.artist').eq(target).ScrollTo();
   }
-
-//   refactor this with eqs now
 });
 
 $('.js-scroll-up').click(function() {
   if (activeScrollBlock !== 0) {
-    $('.content-block').eq(activeScrollBlock-1).ScrollTo()
+    $('.content-block').eq(activeScrollBlock-1).ScrollTo();
   }
 });
 
 $('.js-scroll-down').click(function() {
   if (activeScrollBlock !== (scrollBlocksLength-1)) {
-    $('.content-block').eq(activeScrollBlock+1).ScrollTo()
+    $('.content-block').eq(activeScrollBlock+1).ScrollTo();
   }
 });
 
 
-$('#header::after').click(function() {
-  $('.artist').eq(0).ScrollTo();
+$('#header-bottom').click(function() {
+  if (activeScrollBlock !== (scrollBlocksLength-1)) {
+    $('.content-block').eq(activeScrollBlock+1).ScrollTo();
+  }
 });
