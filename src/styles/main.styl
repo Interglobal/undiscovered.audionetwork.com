@@ -1,6 +1,7 @@
 // VARIABLES
 
 $yellow = yellow
+$gray = gray
 $margin-basic = 25px
 
 // RESET
@@ -70,6 +71,7 @@ html
   font-size: 15px
   line-height: 1.4em
   font-family: sans-serif
+  overflow-y: scroll
 
 .font-neue
   font-family: 'neue_droschke'
@@ -93,12 +95,24 @@ h2
   border-bottom: 4px solid black
   display: inline-block
 
+.font-uppercase
+  text-transform: uppercase
+
 h3
   font-size: 1.6em
   line-height: 1.4em
 
 p
   margin-bottom: 1em
+
+.font-align-left
+  text-align: left
+
+.font-align-right
+  text-align: right
+
+.font-align-center
+  text-align: center
 
 
 // LINKS
@@ -107,6 +121,14 @@ a
   color: inherit
   text-decoration: none
 
+
+// BUTTONS
+
+.button-share
+  background-color: $gray
+  padding: 3px 6px
+  display: inline-block
+  color: white
 
 // STRUCTURE
 
@@ -141,6 +163,10 @@ a
     font-size: 5em
     line-height: 1
 
+  .logo-audionetwork
+    max-width: 200px
+    width: 100%
+
 #header-middle
   max-width: 80%
   margin: 0 auto
@@ -166,26 +192,33 @@ a
 #header-number
   font-size: 6em
 
-.logo-audionetwork
-  max-width: 200px
-  width: 100%
-
 
 // NAV AFTER HEADER
 
 #nav-main
+  display: flex
+  justify-content: center
   width: 100%
   position: fixed
   top: 0
-  background: rgba(255,255,255,0.5)
+  background: rgba(255,255,255,0.8)
   z-index: 1
   transform: translateY(-100%)
   transition: all 300ms
+
+  .logo-undiscovered
+    height: 70px
+
   .logo-audionetwork
-    width: 95px
+    height: 50px
 
 #nav-main.show
   transform: translateY(0)
+
+.nav-main-block
+  width: 33.333%
+  box-sizing: border-box
+  padding: ($margin-basic/2)
 
 
 // FIXED SCROLLING NAV

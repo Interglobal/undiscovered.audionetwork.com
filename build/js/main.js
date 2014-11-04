@@ -20,11 +20,21 @@ $(document).ready(function () {
   });
 
   $('.content-block').waypoint(function(direction) {
+    if (direction === 'up') {
+      if ($(this).index() === 1) {
+        $('#nav-main').removeClass('show');
+      }
+    }
     if (direction === 'down') {
       activeScrollBlock = $(this).index();
     }
     $('.js-scroll').eq($(this).index()).toggleClass('active', direction === 'down');
   }, { offset: '66%' }).waypoint(function(direction) {
+    if (direction === 'down') {
+      if (this.id === 'header') {
+        $('#nav-main').addClass('show');
+      }
+    }
     if (direction === 'up') {
       activeScrollBlock = $(this).index();
     }
