@@ -201,7 +201,7 @@ a {
   margin: 0 auto;
 }
 .background {
-  background-image: url("/img/UD_BG.png");
+  background-image: url("../img/UD_BG.png");
   background-position: center center;
   background-size: cover;
   color: #fff;
