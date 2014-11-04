@@ -305,6 +305,25 @@ a
     font-size: 2em
     line-height: 1.1em
 
+.artist-song
+  background: #002d59
+  padding: 15px 25px
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+
+  audio
+    display: none
+
+  &.playing .player-control
+    background-position-y: 100%
+
+.player-control
+  min-width: 27px
+  height: 43px
+  background: url('../img/player_sprite.png')
+  transition: all 200ms
+  margin-right: 10px;
 
 // FOOTER
 

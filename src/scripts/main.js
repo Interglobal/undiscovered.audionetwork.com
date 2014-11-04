@@ -75,3 +75,19 @@ $('#header-bottom').click(function() {
     $('.content-block').eq(activeScrollBlock+1).ScrollTo();
   }
 });
+
+$('.artist-song .player-control').click( function() {
+  if( $(this).siblings('audio')[0].paused )
+    $(this).siblings('audio')[0].play();
+  else
+    $(this).siblings('audio')[0].pause();
+  
+  $(this).parent().toggleClass('playing');  
+});
+
+$("audio").on("play", function() {
+    $("audio").not(this).each(function(index, audio) {
+        audio.pause();
+        $(this).parent().removeClass('playing')
+    });
+});
