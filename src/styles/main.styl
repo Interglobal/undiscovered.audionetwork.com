@@ -318,6 +318,28 @@ a
   &.playing .player-control
     background-position-y: 100%
 
+  &.playing h4:before
+    display: none
+
+.artist-song h4
+  color: white
+  font-size: 2.5em
+  line-height: 1.2
+  overflow: hidden
+  white-space: nowrap
+  position: relative
+  width: 100%
+
+  &:before
+    display: block
+    background: #002d59
+    content: 'Play Featured Track'
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
 .player-control
   min-width: 27px
   height: 43px
