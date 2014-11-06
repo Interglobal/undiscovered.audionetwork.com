@@ -45,6 +45,16 @@ $(document).ready(function () {
 
 });
 
+$('.js-input').keypress(function(e) {
+  if (10 === e.which || 13 === e.which) {
+    $(this).parents('form').submit();
+  }
+})
+
+$('.js-submit').click(function() {
+  $(this).parents('form').submit();
+});
+
 $('.js-scroll').click(function() {
 // refactor this with eqs now
   var target = $(this).data('scroll');
@@ -81,8 +91,8 @@ $('.artist-song .player-control').click( function() {
     $(this).siblings('audio')[0].play();
   else
     $(this).siblings('audio')[0].pause();
-  
-  $(this).parent().toggleClass('playing');  
+
+  $(this).parent().toggleClass('playing');
 });
 
 $("audio").on("play", function() {
