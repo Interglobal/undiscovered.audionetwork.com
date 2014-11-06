@@ -79,13 +79,6 @@ $('.js-scroll-down').click(function() {
   }
 });
 
-
-$('#header-bottom').click(function() {
-  if (activeScrollBlock !== (scrollBlocksLength-1)) {
-    $('.content-block').eq(activeScrollBlock+1).ScrollTo();
-  }
-});
-
 $('.artist-song .player-control').click( function() {
   if( $(this).siblings('audio')[0].paused )
     $(this).siblings('audio')[0].play();
