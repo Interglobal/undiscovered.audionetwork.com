@@ -15,6 +15,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
 
+    svgmin = require('gulp-svgmin'),
+
     imagemin = require('gulp-imagemin'),
     fontgen = require("gulp-fontgen");
 
@@ -22,6 +24,7 @@ var gulp = require('gulp'),
       js: 'build/js/',
       docs: 'build/',
       css: 'build/css/',
+      svg: 'build/svg/',
       images: 'build/img/',
       fonts: 'build/fonts/'
     };
@@ -54,7 +57,7 @@ gulp.task('styles', function() {
   return gulp.src('src/styles/main.styl')
     .pipe(stylus())
     .on('error', errorNotify)
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest(destinations.css))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
@@ -94,6 +97,16 @@ gulp.task('lib', function() {
     .pipe(notify({ message: 'Lib task complete' }));
 });
 
+// SVG
+gulp.task('svg', function() {
+    return gulp.src('src/svg/*.svg')
+      .pipe(cache('svg'))
+      .pipe(svgmin())
+      .on('error', errorNotify)
+      .pipe(gulp.dest(destinations.svg))
+      .pipe(notify({ message: 'SVG task complete' }));
+});
+
 /* IMAGES */
 gulp.task('images', function () {
     return gulp.src('src/images/*.*')
@@ -121,6 +134,7 @@ gulp.task('watch', function() {
   gulp.watch('src/styles/main.styl', ['styles']);
   gulp.watch('src/scripts/main.js', ['script']);
   gulp.watch('src/libs/*.js', ['lib']);
+  gulp.watch('src/svg/*.svg', ['svg']);
   gulp.watch('src/images/*.*', ['images']);
   gulp.watch('src/fonts/*.*', ['fonts']);
   gulp.watch(['./build/*.html'], ['html']);
@@ -131,4 +145,4 @@ gulp.task('watch', function() {
 gulp.task('default', ['connect', 'watch']);
 
 /* Build Task */
-gulp.task('build', ['html', 'styles', 'script', 'lib', 'images', 'fonts']);
+gulp.task('build', ['html', 'styles', 'script', 'lib', 'svg', 'images', 'fonts']);
