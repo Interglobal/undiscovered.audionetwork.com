@@ -333,10 +333,11 @@ input
 .artist-song
   position: relative
   background: $blue
-  padding: 15px 25px
+  padding: 0 25px
   display: flex;
   flex-direction: row;
   overflow: hidden
+  align-items: center
 
   audio
     display: none
@@ -378,6 +379,15 @@ input
   background: url('../img/player_sprite.png')
   transition: all 200ms
   margin-right: 10px;
+
+.social-buttons
+  padding: 15px 0
+
+.social-buttons .button-share
+  display: block
+
+  &:first-child
+    margin-bottom: 4px
 
 // FOOTER
 
