@@ -473,3 +473,42 @@ input
 
   .artist-quote
     display: none
+
+@media only screen and (max-width: 600px)
+
+  $margin-basic = 16px
+  $height-nav-main = 84px
+
+  #nav-main
+    height: $height-nav-main
+    .logo-undiscovered
+      display: none
+
+  .nav-main-block
+    padding: ($margin-basic/2)
+
+  .artist
+    padding: ($height-nav-main*1.5) 0 60px 0
+
+  #footer
+    padding-top: ($height-nav-main*1.5)
+
+@media only screen and (max-width: 460px)
+
+  #logo-undiscovered-subheading
+    padding: .4em .7em .6em .7em
+
+  #header
+    .logo-audionetwork
+      max-width: 100px
+
+  #header-number
+    font-size: 3em
+
+  #header-arrow
+    display: none
+
+  .artist-song
+    h4
+      font-size: 2em
+
