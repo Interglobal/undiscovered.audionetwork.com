@@ -16,7 +16,23 @@
     </head>
     <body>
       <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1000056856687846',
+            xfbml      : true,
+            version    : 'v2.2'
+          });
+        };
 
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
         <nav id="nav-main">
           <div class="nav-main-block font-align-left">
             <a href="http://www.audionetwork.com/">
@@ -28,12 +44,12 @@
           </div>
           <div class="nav-main-block font-align-right">
             <div id="nav-main-social">
-              <div class="button-share font-neue font-uppercase">
-                <img src="svg/FB_LOGO.svg" /> Like
-              </div>
-              <div class="button-share font-neue font-uppercase">
+              <a class="button-share font-neue font-uppercase" onclick="share.onFB('http://undiscovered.audionetwork.com/')">
+                <img src="svg/FB_LOGO.svg" /> Share
+              </a>
+              <a class="button-share font-neue font-uppercase" onclick="share.onTW('http://undiscovered.audionetwork.com/')">
                 <img src="svg/TW_LOGO.svg" /> Tweet
-              </div>
+              </a>
               <div class="mail-signup font-neue font-uppercase">
                 <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
     						  <input type="hidden" name="thx" value="" />
@@ -111,12 +127,12 @@
                     Your browser sux brah.
                   </audio>
                   <div class="social-buttons">
-                  <div class="button-share font-neue font-uppercase">
-                    <img src="svg/FB_LOGO.svg" /> Like
-                  </div>
-                  <div class="button-share font-neue font-uppercase">
-                    <img src="svg/TW_LOGO.svg" /> Tweet
-                  </div>
+                    <a class="button-share font-neue font-uppercase" onclick="share.onFB('http://chavvos.com')">
+                      <img src="svg/FB_LOGO.svg" /> Share
+                    </a>
+                    <a class="button-share font-neue font-uppercase" onclick="share.onTW('http://chavvos.com')">
+                      <img src="svg/TW_LOGO.svg" /> Tweet
+                    </a>
                 </div>
               </div>
             </div>
@@ -151,12 +167,12 @@
                   Your browser sux brah.
                 </audio>
                   <div class="social-buttons">
-                    <div class="button-share font-neue font-uppercase">
-                      <img src="svg/FB_LOGO.svg" /> Like
-                    </div>
-                    <div class="button-share font-neue font-uppercase">
+                    <a class="button-share font-neue font-uppercase">
+                      <img src="svg/FB_LOGO.svg" /> Share
+                    </a>
+                    <a class="button-share font-neue font-uppercase">
                       <img src="svg/TW_LOGO.svg" /> Tweet
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -191,12 +207,12 @@
                     Your browser sux brah.
                   </audio>
                   <div class="social-buttons">
-                    <div class="button-share font-neue font-uppercase">
-                      <img src="svg/FB_LOGO.svg" /> Like
-                    </div>
-                    <div class="button-share font-neue font-uppercase">
+                    <a class="button-share font-neue font-uppercase">
+                      <img src="svg/FB_LOGO.svg" /> Share
+                    </a>
+                    <a class="button-share font-neue font-uppercase">
                       <img src="svg/TW_LOGO.svg" /> Tweet
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -231,12 +247,12 @@
                     Your browser sux brah.
                   </audio>
                   <div class="social-buttons">
-                    <div class="button-share font-neue font-uppercase">
-                      <img src="svg/FB_LOGO.svg" /> Like
-                    </div>
-                    <div class="button-share font-neue font-uppercase">
+                    <a class="button-share font-neue font-uppercase">
+                      <img src="svg/FB_LOGO.svg" /> Share
+                    </a>
+                    <a class="button-share font-neue font-uppercase">
                       <img src="svg/TW_LOGO.svg" /> Tweet
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
