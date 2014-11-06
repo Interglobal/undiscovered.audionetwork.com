@@ -161,7 +161,6 @@ input
   flex-direction: column
   justify-content: space-around
   align-items: center
-  margin-bottom: ($height-nav-main*1.5)
 
   .logo-audionetwork
     max-height: 90px
@@ -182,7 +181,7 @@ input
   z-index: 999
   position: absolute
   margin: 0 20px;
-  bottom: 0
+  bottom: 10px
   left: 0
   right: 0
   display: flex
@@ -267,7 +266,7 @@ input
   display: flex
   position: relative
   box-sizing: border-box
-  padding: 60px 0 80px 0
+  padding: ($height-nav-main*1.5) 0 80px 0
 
 .artist:nth-child(even)
   flex-direction: row-reverse
@@ -277,7 +276,7 @@ input
 
 .artist-picture
   position: absolute
-  top: 0
+  top: $height-nav-main
   right: 0
   z-index: -1
   max-width: 100%
