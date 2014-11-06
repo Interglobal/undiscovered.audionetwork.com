@@ -57,6 +57,14 @@ img
   max-width: 100%
   height: auto
 
+.u-cf:before,
+.u-cf:after 
+  content: " "
+  display: table
+
+.u-cf:after
+  clear: both
+
 // TYPOGRAPHY
 
 @font-face
@@ -150,12 +158,10 @@ input
   background-size: cover
   color: white
 
-
 // HEADER
 
 #header
   width: 100%
-  height: 100vh
   position: relative
   display: flex
   flex-direction: column
@@ -168,7 +174,6 @@ input
     width: auto
 
 #header-middle
-  max-width: 80%
   margin: 0 auto
   text-align: center
 
@@ -186,7 +191,6 @@ input
   right: 0
   display: flex
   flex-direction: row
-  flex-wrap: nowrap
   justify-content: space-between
   align-items: center
 
@@ -287,6 +291,7 @@ input
 .artist-about,
 .artist-music
   box-sizing: border-box
+  flex-direction: column
 
 .artist-about
   max-width: 44.4%
@@ -310,7 +315,6 @@ input
   max-width: 55.6%
   padding: 0 40px
   display: flex;
-  flex-flow: column wrap;
   justify-content: flex-end;
 
 .artist-quote
@@ -327,14 +331,20 @@ input
     line-height: 1.1em
 
 .artist-song
+  position: relative
   background: $blue
   padding: 15px 25px
   display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: hidden
 
   audio
     display: none
+    opacity: 0
+    position: absolute
+    top: 55px
+    left: 10px
+    
 
   &.playing .player-control
     background-position-y: 100%
@@ -362,7 +372,8 @@ input
     height: 100%
 
 .player-control
-  min-width: 27px
+  display: inline-block
+  width: 27px
   height: 43px
   background: url('../img/player_sprite.png')
   transition: all 200ms
@@ -381,6 +392,12 @@ input
 #more-undiscovered li
     max-width: 45%
 
+#more-undiscovered li 
+  float: right;
+
+#more-undiscovered li:nth-child(odd) 
+  float: left;
+
 #more-undiscovered img
   max-width: 100%
   margin-bottom: 30px
@@ -391,28 +408,30 @@ input
 
 #more-undiscovered
   list-style: none
-  display: flex
-  flex-flow: row wrap
-  justify-content: space-around
+  display: block
+
+@media  only screen and (min-width: 840px )
+  #more-undiscovered
+    display: flex;
+    justify-content: space-between;
 
 #footer-content
   font-size: 0.9rem
   max-width: 680px
   margin: 0 auto
-  display: flex
   border-top: 2px solid white
   padding: 35px 0
-  flex-wrap: wrap
-  justify-content: space-between
 
-@media  only screen and (min-width: 840px )
-  #footer-content
-    flex-wrap: nowrap
 
 #footer-content > *
   max-width: 100%
 
 @media  only screen and (min-width: 840px )
+  #footer-content 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
   #footer-content > *
     max-width: 48%
 
