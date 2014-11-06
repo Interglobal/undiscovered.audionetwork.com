@@ -211,6 +211,14 @@ input {
   outline: 0;
   background-color: transparent;
 }
+#form-result {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+.form-result {
+  display: none;
+}
 .container {
   max-width: 1024px;
   overflow: hidden;
@@ -248,6 +256,7 @@ input {
   margin-bottom: 10px;
 }
 #header-middle {
+  max-width: 85%;
   margin: 0 auto;
   text-align: center;
 }
@@ -324,6 +333,7 @@ input {
 #nav-main-social {
   width: 161px;
   float: right;
+  overflow: hidden;
 }
 #nav-main-social img {
   vertical-align: text-top;
@@ -341,6 +351,21 @@ input {
   padding: 4px;
   border: solid 2px #7f8285;
   margin-top: 4px;
+}
+.mail-signup-mobile {
+  display: none;
+  margin-top: 30px;
+  width: 90%;
+  text-align: center;
+}
+.mail-signup-mobile input {
+  width: 180px;
+}
+.mail-signup-mobile img {
+  vertical-align: text-top;
+}
+.mail-signup-mobile-trigger {
+  display: none;
 }
 #nav-scroll {
   z-index: 999;
@@ -447,7 +472,8 @@ input {
 .artist-song {
   position: relative;
   background: #002d59;
-  padding: 0 25px;
+  padding: 0 20px;
+  height: 89px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -496,6 +522,10 @@ input {
   width: 100%;
   height: 100%;
 }
+.player-control-container {
+  width: 10%;
+  margin-right: 1%;
+}
 .player-control {
   display: inline-block;
   width: 27px;
@@ -503,13 +533,14 @@ input {
   background: url("../img/player_sprite.png");
   -webkit-transition: all 200ms;
           transition: all 200ms;
-  margin-right: 10px;
+}
+.player-text-container {
+  width: 69%;
+  margin-right: 2%;
 }
 .social-buttons {
-  padding: 15px 0;
-}
-.social-buttons .button-share {
-  display: block;
+  width: 18%;
+  text-align: right;
 }
 .social-buttons .button-share:first-child {
   margin-bottom: 4px;
@@ -522,10 +553,13 @@ input {
   max-width: 860px;
   padding: 0 20px;
 }
-#more-undiscovered li {
-  max-width: 45%;
+#more-undiscovered {
+  margin-bottom: 30px;
 }
 #more-undiscovered li {
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 1em;
   float: right;
 }
 #more-undiscovered li:nth-child(odd) {
@@ -533,16 +567,15 @@ input {
 }
 #more-undiscovered img {
   max-width: 100%;
-  margin-bottom: 30px;
 }
 @media only screen and (min-width: 840px) {
+  #more-undiscovered {
+    list-style: none;
+    display: block;
+  }
   #more-undiscovered img {
     max-width: 192px;
   }
-}
-#more-undiscovered {
-  list-style: none;
-  display: block;
 }
 @media only screen and (min-width: 840px) {
   #more-undiscovered {
@@ -555,16 +588,16 @@ input {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-#footer-content {
-  font-size: 0.9rem;
-  max-width: 680px;
-  margin: 0 auto;
-  border-top: 2px solid #fff;
-  padding: 35px 0;
-}
-#footer-content > * {
-  max-width: 100%;
+  #footer-content {
+    font-size: 0.9rem;
+    max-width: 680px;
+    margin: 0 auto;
+    border-top: 2px solid #fff;
+    padding: 35px 0;
+  }
+  #footer-content > * {
+    max-width: 100%;
+  }
 }
 @media only screen and (min-width: 840px) {
   #footer-content {
@@ -585,25 +618,30 @@ input {
   #footer-content > * {
     max-width: 48%;
   }
-}
-#footer-contact {
-  padding: 10px 15px;
-  text-align: center;
-  box-sizing: border-box;
-  border: 1px solid #fff;
-}
-#footer-contact h3 {
-  font-size: 2.6em;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
+  #footer-contact {
+    padding: 10px 15px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+  }
+  #footer-contact h3 {
+    font-size: 2.6em;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .background {
     background-image: url("../img/UD_BG_large.png");
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
+  .artist-song h4 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 840px) {
   #nav-scroll {
     display: none;
   }
@@ -641,29 +679,81 @@ input {
     margin: 0 auto 25px auto;
     text-align: center;
   }
+  .artist-song h4 {
+    font-size: 2.5em;
+  }
   .artist-quote {
     display: none;
+  }
+  #footer-contact header {
+    padding: 0.7em 1em;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    margin-bottom: 1em;
   }
 }
 @media only screen and (max-width: 600px) {
   #nav-main {
     height: 84px;
   }
-  #nav-main .logo-undiscovered {
+  #nav-main .nav-main-block {
+    width: 60%;
+  }
+  #nav-main .nav-main-block:first-child {
+    width: 0px;
     display: none;
+  }
+  #nav-main .nav-main-block:last-child {
+    width: 40%;
   }
   .nav-main-block {
     padding: 8px;
   }
   .artist {
-    padding: 126px 0 60px 0;
+    padding: 84px 0 60px 0;
+  }
+  .artist-song {
+    padding: 0 15px;
+    height: 80px;
+  }
+  .artist-song h4 {
+    font-size: 1.5em;
+    line-height: 1.1;
+  }
+  .social-buttons .button-share {
+    width: 31px;
+  }
+  .social-buttons .button-share-text {
+    display: none;
   }
   #footer {
     padding-top: 126px;
   }
 }
 @media only screen and (max-width: 460px) {
+  #nav-main-social {
+    padding-top: 20px;
+  }
+  #nav-main-social .mail-signup {
+    display: none;
+  }
+  #nav-main-social .button-share,
+  #nav-main-social .mail-signup-mobile-trigger {
+    width: 28px;
+    display: inline-block;
+    padding: 3px 2px;
+    margin: 0;
+    border: 0;
+  }
+  #nav-main-social .button-share-text {
+    display: none;
+  }
+  #nav-main-social input {
+    display: none;
+  }
   #logo-undiscovered-subheading {
+    font-size: 1.9em;
     padding: 0.4em 0.7em 0.6em 0.7em;
   }
   #header .logo-audionetwork {
@@ -675,7 +765,9 @@ input {
   #header-arrow {
     display: none;
   }
-  .artist-song h4 {
-    font-size: 2em;
+}
+@media only screen and (max-width: 320px) {
+  #logo-undiscovered-subheading {
+    font-size: 1.7em;
   }
 }

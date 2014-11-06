@@ -3,8 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>Undiscovered #004 | Audio Network</title>
+        <meta property="og:title" content="Undiscovered #004 | Audio Network" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://undiscovered.audionetwork.com/" />
+        <meta property="og:image" content="" />
+        <meta name="description" content="Audio Network Production Music for film, TV, advertising and corporate video | Undiscovered #004">
+        <meta property="og:description" content="Audio Network Production Music for film, TV, advertising and corporate video | Undiscovered #004" />
+
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/main.min.css">
@@ -33,6 +39,16 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
+
+        <div id="form-result">
+          <div id="form-success" class="form-result">
+            Thanks!
+          </div>
+          <div id="form-failure" class="form-result">
+            Sorry your email address could not be subscribed at this time. Please try again later.
+          </div>
+        </div>
+
         <nav id="nav-main">
           <div class="nav-main-block font-align-left">
             <a href="http://www.audionetwork.com/">
@@ -45,15 +61,16 @@
           <div class="nav-main-block font-align-right">
             <div id="nav-main-social">
               <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com/')">
-                <img src="svg/FB_LOGO.svg" /> Share
+                <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
               </a>
               <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com/')">
-                <img src="svg/TW_LOGO.svg" /> Tweet
+                <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
               </a>
+              <span class="mail-signup-mobile-trigger u-pointer js-mobile-mail-trigger"><img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/></span>
               <div class="mail-signup font-neue font-uppercase">
                 <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
-    						  <input type="hidden" name="thx" value="" />
-                  <input type="hidden" name="err" value="" />
+    						  <input type="hidden" name="thx" value="http://labs.patrickbest.com/studio/undiscovered#success" />
+                  <input type="hidden" name="err" value="http://labs.patrickbest.com/studio/undiscovered#failure" />
                   <input type="hidden" name="MID" value="6217750" />
                   <input type="hidden" name="Email Type" value="HTML"/>
     					    <input type="hidden" name="SubAction" value="sub_add_update"/>
@@ -62,6 +79,17 @@
     					</form>
               </div>
             </div>
+          </div>
+          <div class="mail-signup-mobile">
+            <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
+    						  <input type="hidden" name="thx" value="http://labs.patrickbest.com/studio/undiscovered#success" />
+                  <input type="hidden" name="err" value="http://labs.patrickbest.com/studio/undiscovered#failure" />
+                  <input type="hidden" name="MID" value="6217750" />
+                  <input type="hidden" name="Email Type" value="HTML"/>
+    					    <input type="hidden" name="SubAction" value="sub_add_update"/>
+    					    <input type="text" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
+                  <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
+    				</form>
           </div>
         </nav>
 
@@ -111,7 +139,7 @@
                   <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
                   <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
                   luctus magna. </p>
-                  <p><a href="#" class="artist-read-more" title="Link title">Read full interview here</a></p>
+                  <p><a href="http://www.audionetwork.com/content/dialate-q-and-a" class="artist-read-more" title="Link title">Read full interview here</a></p>
                 </div>
               </div>
 
@@ -120,18 +148,22 @@
                   <h1>Really interesting and fun pull quote to go right here</h1>
                 </div>
                 <div class="artist-song">
-                  <span class="player-control u-pointer"></span>
-                  <h4 class="font-geogrot"><marquee>Track Title</marquee></h4>
+                  <div class="player-control-container js-player-trigger">
+                    <span class="player-control u-pointer"></span>
+                  </div>
+                  <div class="player-text-container">
+                    <h4 class="font-geogrot"><marquee>Dare</marquee></h4>
+                  </div>
                   <audio controls>
                     <source src="audio/Dare_Dialate.mp3" type="audio/mpeg">
-                    Your browser sux brah.
+                    Please use a modern web browser
                   </audio>
                   <div class="social-buttons">
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com')">
-                      <img src="svg/FB_LOGO.svg" /> Share
+                      <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
                     </a>
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com')">
-                      <img src="svg/TW_LOGO.svg" /> Tweet
+                      <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
                     </a>
                   </div>
                 </div>
@@ -152,7 +184,7 @@
                 <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
                 <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
                 luctus magna. </p>
-                <p><a href="#" class="artist-read-more" title="Link title">Read full interview here</a></p>
+                <p><a href="http://www.audionetwork.com/content/paddy-conn-q-and-a" class="artist-read-more" title="Link title">Read full interview here</a></p>
               </div>
             </div>
 
@@ -161,18 +193,22 @@
                 <h1>Really interesting and fun pull quote to go right here</h1>
               </div>
               <div class="artist-song">
-                <span class="player-control u-pointer"></span>
-                <h4 class="font-geogrot"><marquee>Track Title</marquee></h4>
+                <div class="player-control-container js-player-trigger">
+                  <span class="player-control u-pointer"></span>
+                </div>
+                <div class="player-text-container">
+                  <h4 class="font-geogrot"><marquee>Young Dream</marquee></h4>
+                </div>
                 <audio controls>
                   <source src="audio/Young_Dream_Paddy_Conn.mp3" type="audio/mpeg">
-                  Your browser sux brah.
+                  Please use a modern web browser
                 </audio>
                   <div class="social-buttons">
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com')">
-                      <img src="svg/FB_LOGO.svg" /> Share
+                      <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
                     </a>
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com')">
-                      <img src="svg/TW_LOGO.svg" /> Tweet
+                      <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
                     </a>
                   </div>
                 </div>
@@ -192,7 +228,7 @@
                   <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
                   <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
                   luctus magna. </p>
-                  <p><a href="#" class="artist-read-more" title="Link title">Read full interview here</a></p>
+                  <p><a href="http://www.audionetwork.com/content/james-dexterous-q-and-a" class="artist-read-more" title="Link title">Read full interview here</a></p>
                 </div>
               </div>
 
@@ -201,18 +237,22 @@
                   <h1>Really interesting and fun pull quote to go right here</h1>
                 </div>
                 <div class="artist-song">
-                  <span class="player-control u-pointer"></span>
-                  <h4 class="font-geogrot"><marquee>Track Title for a long song baby</marquee></h4>
+                  <div class="player-control-container js-player-trigger">
+                    <span class="player-control u-pointer"></span>
+                  </div>
+                  <div class="player-text-container">
+                    <h4 class="font-geogrot"><marquee>A Single Man</marquee></h4>
+                  </div>
                   <audio controls>
                     <source src="audio/A_Single_Man_James_Dextrous.mp3" type="audio/mpeg">
-                    Your browser sux brah.
+                    Please use a modern web browser
                   </audio>
                   <div class="social-buttons">
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com')">
-                      <img src="svg/FB_LOGO.svg" /> Share
+                      <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
                     </a>
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com')">
-                      <img src="svg/TW_LOGO.svg" /> Tweet
+                      <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
                     </a>
                   </div>
                 </div>
@@ -232,7 +272,7 @@
                   <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
                   <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
                   luctus magna. </p>
-                  <p><a href="#" class="artist-read-more" title="Link title">Read full interview here</a></p>
+                  <p><a href="http://www.audionetwork.com/content/henry-white-and-nathan-feddo-q-and-a" class="artist-read-more" title="Link title">Read full interview here</a></p>
                 </div>
               </div>
 
@@ -241,18 +281,22 @@
                   <h1>Really interesting and fun pull quote to go right here</h1>
                 </div>
                 <div class="artist-song">
-                  <span class="player-control u-pointer"></span>
-                  <h4 class="font-geogrot"><marquee>Track Title</marquee></h4>
+                  <div class="player-control-container js-player-trigger">
+                    <span class="player-control u-pointer"></span>
+                  </div>
+                  <div class="player-text-container">
+                    <h4 class="font-geogrot"><marquee>Case</marquee></h4>
+                  </div>
                   <audio controls>
                     <source src="audio/Case_Nathan_White_Henry_Feddo.mp3" type="audio/mpeg">
-                    Your browser sux brah.
+                    Please use a modern web browser
                   </audio>
                   <div class="social-buttons">
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com')">
-                      <img src="svg/FB_LOGO.svg" /> Share
+                      <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
                     </a>
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com')">
-                      <img src="svg/TW_LOGO.svg" /> Tweet
+                      <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
                     </a>
                   </div>
                 </div>
@@ -269,16 +313,16 @@
 
                 <ul id="more-undiscovered" class="u-cf">
                   <li>
-                    <a href="#"><img src="img/Undiscovered_001_360x360.png" alt="Undiscovered #001" /></a>
+                    <a href="http://www.audionetwork.com/content/undiscovered/001"><img src="img/Undiscovered_001_360x360.png" alt="Undiscovered #001" /></a>
                   </li>
                   <li>
-                    <a href="#"><img src="img/Undiscovered_002_360x360.png" alt="Undiscovered #001" /></a>
+                    <a href="http://www.audionetwork.com/content/undiscovered/002"><img src="img/Undiscovered_002_360x360.png" alt="Undiscovered #001" /></a>
                   </li>
                   <li>
-                    <a href="#"><img src="img/Undiscovered_003_360x360.png" alt="Undiscovered #001" /></a>
+                    <a href="http://www.audionetwork.com/content/undiscovered/003"><img src="img/Undiscovered_003_360x360.png" alt="Undiscovered #001" /></a>
                   </li>
                   <li>
-                    <a href="#"><img src="img/Undiscovered_004_360x360.png" alt="Undiscovered #001" /></a>
+                    <a href="http://www.audionetwork.com/content/undiscovered/004"><img src="img/Undiscovered_004_360x360.png" alt="Undiscovered #001" /></a>
                   </li>
                 </ul>
 

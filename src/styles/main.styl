@@ -147,6 +147,14 @@ input
   outline: 0
   background-color: transparent
 
+#form-result
+  display: none
+  text-align: center
+  padding: 20px
+
+.form-result
+  display: none
+
 // STRUCTURE
 
 .container
@@ -176,6 +184,7 @@ input
     margin-bottom: 10px
 
 #header-middle
+  max-width: 85%
   margin: 0 auto
   text-align: center
 
@@ -231,6 +240,7 @@ input
 #nav-main-social
   width: 161px
   float: right
+  overflow: hidden
   img
     vertical-align: text-top
 
@@ -247,6 +257,19 @@ input
   padding: 4px
   border: solid 2px $gray
   margin-top: 4px
+
+.mail-signup-mobile
+  display: none
+  margin-top: 30px
+  width: 90%
+  text-align: center
+  input
+    width: 180px
+  img
+    vertical-align: text-top
+
+.mail-signup-mobile-trigger
+  display: none
 
 
 // FIXED SCROLLING NAV
@@ -333,10 +356,13 @@ input
     font-size: 3.2em
     line-height: 1.1em
 
+// PLAYER
+
 .artist-song
   position: relative
   background: $blue
-  padding: 0 25px
+  padding: 0 20px
+  height: 89px
   display: flex;
   flex-direction: row;
   overflow: hidden
@@ -349,32 +375,35 @@ input
     top: 55px
     left: 10px
 
+  &.playing
+    .player-control
+      background-position: 0 100%
+      background-position-y: 100%
+    h4:before
+      display: none
 
-  &.playing .player-control
-    background-position: 0 100%
-    background-position-y: 100%
-
-  &.playing h4:before
-    display: none
-
-.artist-song h4
-  color: white
-  font-size: 2.5em
-  line-height: 1.2
-  overflow: hidden
-  white-space: nowrap
-  position: relative
-  width: 100%
-
-  &:before
-    display: block
-    background: #002d59
-    content: 'Play Featured Track'
-    position: absolute
-    top: 0
-    left: 0
+  h4
+    color: white
+    font-size: 2.5em
+    line-height: 1.2
+    overflow: hidden
+    white-space: nowrap
+    position: relative
     width: 100%
-    height: 100%
+
+    &:before
+      display: block
+      background: #002d59
+      content: 'Play Featured Track'
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+.player-control-container
+    width: 10%
+    margin-right: 1%
 
 .player-control
   display: inline-block
@@ -382,65 +411,65 @@ input
   height: 43px
   background: url('../img/player_sprite.png')
   transition: all 200ms
-  margin-right: 10px;
+
+.player-text-container
+    width: 69%
+    margin-right: 2%
 
 .social-buttons
-  padding: 15px 0
-
-.social-buttons .button-share
-  display: block
-
-  &:first-child
-    margin-bottom: 4px
+  width: 18%
+  text-align: right
+  .button-share
+    &:first-child
+      margin-bottom: 4px
 
 // FOOTER
 
 #footer
   box-sizing: border-box
   padding-top: ($height-nav-main*1.5)
-
-#footer .container
-  max-width: 860px
-  padding: 0 20px
-
-#more-undiscovered li
-    max-width: 45%
-
-#more-undiscovered li
-  float: right;
-
-#more-undiscovered li:nth-child(odd)
-  float: left;
-
-#more-undiscovered img
-  max-width: 100%
-  margin-bottom: 30px
-
-@media  only screen and (min-width: 840px )
-  #more-undiscovered img
-      max-width: 192px
+  .container
+    max-width: 860px
+    padding: 0 20px
 
 #more-undiscovered
-  list-style: none
-  display: block
+  margin-bottom: 30px
+  li
+    max-width: 50%
+    box-sizing: border-box
+    padding: 1em
+    float: right
+    &:nth-child(odd)
+      float: left
+  img
+    max-width: 100%
 
-@media  only screen and (min-width: 840px )
+@media only screen and (min-width: 840px )
+
+  #more-undiscovered
+    list-style: none
+    display: block
+    img
+      max-width: 192px
+
+@media only screen and (min-width: 840px )
+
   #more-undiscovered
     display: flex;
     justify-content: space-between;
 
-#footer-content
-  font-size: 0.9rem
-  max-width: 680px
-  margin: 0 auto
-  border-top: 2px solid white
-  padding: 35px 0
+  #footer-content
+    font-size: 0.9rem
+    max-width: 680px
+    margin: 0 auto
+    border-top: 2px solid white
+    padding: 35px 0
 
+  #footer-content > *
+    max-width: 100%
 
-#footer-content > *
-  max-width: 100%
+@media only screen and (min-width: 840px )
 
-@media  only screen and (min-width: 840px )
   #footer-content
     display: flex
     flex-direction: row
@@ -449,17 +478,17 @@ input
   #footer-content > *
     max-width: 48%
 
-#footer-contact
-  padding: 10px 15px
-  text-align: center
-  box-sizing: border-box
-  border: 1px solid white
+  #footer-contact
+    padding: 10px 15px
+    text-align: center
+    box-sizing: border-box
+    border: 1px solid white
 
-#footer-contact h3
-  font-size: 2.6em
-  border-bottom: 2px solid white
-  margin-bottom: 15px
-  padding-bottom: 5px
+    h3
+      font-size: 2.6em
+      border-bottom: 2px solid white
+      margin-bottom: 15px
+      padding-bottom: 5px
 
 
 // RESPONSIVE
@@ -469,7 +498,13 @@ input
   .background
     background-image: url(../img/UD_BG_large.png)
 
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 1000px)
+
+  .artist-song
+    h4
+      font-size: 2em
+
+@media only screen and (max-width: 840px)
 
   #nav-scroll
     display: none
@@ -504,8 +539,20 @@ input
     margin: 0 auto $margin-basic auto
     text-align: center
 
+  .artist-song
+    h4
+      font-size: 2.5em
+
   .artist-quote
     display: none
+
+  #footer-contact
+    header
+      padding: 0.7em 1em
+      text-align: center
+      box-sizing: border-box
+      border: 1px solid #fff
+      margin-bottom: 1em
 
 @media only screen and (max-width: 600px)
 
@@ -514,21 +561,56 @@ input
 
   #nav-main
     height: $height-nav-main
-    .logo-undiscovered
-      display: none
+    .nav-main-block
+      width: 60%
+      &:first-child
+        width: 0px
+        display: none
+      &:last-child
+        width: 40%
 
   .nav-main-block
     padding: ($margin-basic/2)
 
   .artist
-    padding: ($height-nav-main*1.5) 0 60px 0
+    padding: ($height-nav-main) 0 60px 0
+
+  .artist-song
+    padding: 0 15px
+    height: 80px
+
+    h4
+      font-size: 1.5em
+      line-height: 1.1
+
+  .social-buttons
+    .button-share
+      width: 31px
+    .button-share-text
+      display: none
 
   #footer
     padding-top: ($height-nav-main*1.5)
 
 @media only screen and (max-width: 460px)
 
+  #nav-main-social
+    padding-top: 20px
+    .mail-signup
+      display: none
+    .button-share, .mail-signup-mobile-trigger
+      width: 28px
+      display: inline-block
+      padding: 3px 2px
+      margin: 0
+      border: 0
+    .button-share-text
+      display: none
+    input
+      display: none
+
   #logo-undiscovered-subheading
+    font-size: 1.9em
     padding: .4em .7em .6em .7em
 
   #header
@@ -541,7 +623,8 @@ input
   #header-arrow
     display: none
 
-  .artist-song
-    h4
-      font-size: 2em
+@media only screen and (max-width: 320px)
+
+  #logo-undiscovered-subheading
+    font-size: 1.7em
 

@@ -13,6 +13,22 @@ function layout() {
 
 $(document).ready(function () {
 
+  // FORM COMPLETE STATES
+
+  if (window.location.hash) {
+    formResult = $('#form-result');
+
+		var result = window.location.hash.substr(1);
+		if (result) {
+  		$('#form-'+result).show();
+			formResult.slideDown(400);
+			setTimeout(function() {
+  			formResult.slideUp(400);
+			}, 2000);
+      window.location.hash = '';
+		}
+	}
+
   layout();
   $(window).resize(function() {
     windowHeight = $(window).height();
@@ -45,15 +61,26 @@ $(document).ready(function () {
 
 });
 
+// FORM
+
 $('.js-input').keypress(function(e) {
   if (10 === e.which || 13 === e.which) {
     $(this).parents('form').submit();
   }
-})
+});
 
 $('.js-submit').click(function() {
   $(this).parents('form').submit();
 });
+
+// MOBILE FORM SWAP
+
+$('.mail-signup-mobile-trigger').click(function() {
+  $('.nav-main-block').hide();
+  $('.mail-signup-mobile').show();
+});
+
+// SCROLLS
 
 $('.js-scroll').click(function() {
   var target = $(this).data('scroll');
@@ -78,23 +105,26 @@ $('.js-scroll-down').click(function() {
   }
 });
 
-$('.artist-song .player-control').click( function() {
-  if( $(this).siblings('audio')[0].paused )
-    $(this).siblings('audio')[0].play();
-  else
-    $(this).siblings('audio')[0].pause();
+// AUDIO
 
+$('.js-player-trigger').click( function() {
+  if( $(this).siblings('audio')[0].paused ) {
+    $(this).siblings('audio')[0].play();
+  } else {
+    $(this).siblings('audio')[0].pause();
+  }
   $(this).parent().toggleClass('playing');
 });
 
-$("audio").on("play", function() {
-    $("audio").not(this).each(function(index, audio) {
-        audio.pause();
-        $(this).parent().removeClass('playing')
-    });
+$('audio').on('play', function() {
+  $('audio').not(this).each(function(index, audio) {
+    audio.pause();
+    $(this).parent().removeClass('playing');
+  });
 });
 
-/* Share buttons */
+// SOCIAL SHARES
+
 var share = {
   onFB: function(url) {
     FB.ui({
@@ -107,4 +137,4 @@ var share = {
     window.open("https://twitter.com/intent/tweet?url="+encodeURIComponent(url)+"&text="+encodeURIComponent(document.title)+ "&count=none/", "", "height=300, width=550, resizable=1");
     return true;
   }
-}
+};
