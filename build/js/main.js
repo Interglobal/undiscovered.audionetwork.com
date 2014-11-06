@@ -56,7 +56,6 @@ $('.js-submit').click(function() {
 });
 
 $('.js-scroll').click(function() {
-// refactor this with eqs now
   var target = $(this).data('scroll');
   if (target === 'header') {
     $('#header').ScrollTo();
