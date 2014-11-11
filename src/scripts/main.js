@@ -134,7 +134,7 @@ var share = {
   },
   onTW: function(url){
     console.log(url);
-    window.open("https://twitter.com/intent/tweet?url="+encodeURIComponent(url)+"&text="+encodeURIComponent(document.title)+ "&count=none/", "", "height=300, width=550, resizable=1");
+    window.open("https://twitter.com/intent/tweet?url="+encodeURIComponent(url)+"&text=Check out the latest release in Audio Network’s #Undiscovered Series&count=none/", "", "height=300, width=550, resizable=1");
     return true;
   }
 };

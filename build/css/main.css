@@ -422,10 +422,10 @@ input {
 }
 .artist-about {
   max-width: 44.4%;
-  padding: 0 12px 0 60px;
+  padding: 0 12px 0 12px;
 }
 .artist:nth-child(even) .artist-about {
-  padding: 0 60px 0 12px;
+  padding: 0 12px 0 12px;
 }
 .artist-header {
   text-align: center;
