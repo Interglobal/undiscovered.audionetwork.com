@@ -400,9 +400,6 @@ input {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.artist:nth-child(even) .artist-about {
-  padding: 0 108px 0 12px;
-}
 .artist-picture {
   position: absolute;
   top: 100px;
@@ -425,7 +422,10 @@ input {
 }
 .artist-about {
   max-width: 44.4%;
-  padding: 0 12px 0 108px;
+  padding: 0 12px 0 60px;
+}
+.artist:nth-child(even) .artist-about {
+  padding: 0 60px 0 12px;
 }
 .artist-header {
   text-align: center;
@@ -515,7 +515,7 @@ input {
 .artist-song h4:before {
   display: block;
   background: #002d59;
-  content: 'Play Featured Track';
+  content: 'Preview Featured Track';
   position: absolute;
   top: 0;
   left: 0;
@@ -535,11 +535,11 @@ input {
           transition: all 200ms;
 }
 .player-text-container {
-  width: 69%;
+  width: 87%;
   margin-right: 2%;
 }
 .social-buttons {
-  width: 18%;
+  display: none;
   text-align: right;
 }
 .social-buttons .button-share:first-child {
