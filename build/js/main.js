@@ -2,6 +2,17 @@ function l(data) {
   console.log(data);
 }
 
+function getQueryVariable(variable) {
+  var query = window.location.hash.split('?');
+  var raw = query[1];
+  var vars = raw.split('&');
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split('=');
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+
 var activeScrollBlock;
 var scrollBlocksLength = $('.content-block').length;
 
@@ -18,8 +29,21 @@ $(document).ready(function () {
   if (window.location.hash) {
     formResult = $('#form-result');
 
-		var result = window.location.hash.substr(1);
-		if (result) {
+    var raw = window.location.hash.split('?');
+		var result = raw[0].substr(1);
+		if (result === 'failure') {
+  		errorCode = getQueryVariable('errorcode');
+  		if (errorCode === '4') {
+    		$('#form-failure-4').show();
+  		} else {
+    		$('#form-failure-generic').show();
+  		}
+  		formResult.slideDown(400);
+			setTimeout(function() {
+  			formResult.slideUp(400);
+			}, 3000);
+      window.location.hash = '';
+		} else {
   		$('#form-'+result).show();
 			formResult.slideDown(400);
 			setTimeout(function() {

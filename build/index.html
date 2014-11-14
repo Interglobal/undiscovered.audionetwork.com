@@ -44,8 +44,11 @@
           <div id="form-success" class="form-result">
             Thanks!
           </div>
-          <div id="form-failure" class="form-result">
+          <div id="form-failure-generic" class="form-result">
             Sorry your email address could not be subscribed at this time. Please try again later.
+          </div>
+          <div id="form-failure-4" class="form-result">
+            Sorry the email address you entered was invalid. Please try again.
           </div>
         </div>
 
@@ -61,10 +64,10 @@
           <div class="nav-main-block font-align-right">
             <div id="nav-main-social">
               <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com/')">
-                <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
+                <img src="svg/FB_LOGO.svg" alt="Facebook" /> <span class="button-share-text">Share</span>
               </a>
               <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com/')">
-                <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
+                <img src="svg/TW_LOGO.svg" alt="Twitter" /> <span class="button-share-text">Tweet</span>
               </a>
               <span class="mail-signup-mobile-trigger u-pointer js-mobile-mail-trigger"><img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/></span>
               <div class="mail-signup font-neue font-uppercase">
@@ -74,7 +77,7 @@
                   <input type="hidden" name="MID" value="6217750" />
                   <input type="hidden" name="Email Type" value="HTML"/>
     					    <input type="hidden" name="SubAction" value="sub_add_update"/>
-    					    <input type="text" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
+    					    <input type="email" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
                   <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
     					</form>
               </div>
@@ -87,7 +90,7 @@
                   <input type="hidden" name="MID" value="6217750" />
                   <input type="hidden" name="Email Type" value="HTML"/>
     					    <input type="hidden" name="SubAction" value="sub_add_update"/>
-    					    <input type="text" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
+    					    <input type="email" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
                   <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
     				</form>
           </div>
@@ -103,6 +106,7 @@
             <li class="js-scroll u-pointer" data-scroll="3">&#9679;</li>
             <li class="js-scroll u-pointer" data-scroll="footer">&#9679;</li>
             <li class="js-scroll-down scroll-arrow u-pointer">&#9660;</li>
+          </ul>
         </nav>
 
         <main>
@@ -118,7 +122,7 @@
             <div id="header-bottom">
               <h4 id="header-number" class="font-neue">#004</h4>
 
-              <img src="svg/UD_ARROW.svg" id="header-arrow" class="js-scroll u-pointer" data-scroll="0" />
+              <img src="svg/UD_ARROW.svg" id="header-arrow" class="js-scroll u-pointer" data-scroll="0" alt="Down" />
 
               <a href="http://www.audionetwork.com/">
                 <img src="svg/AN_LOGO.svg" class="logo-audionetwork" alt="Audio Network" />
@@ -128,7 +132,7 @@
 
             <!-- Henry White & Nathan Feddo -->
             <article id="artist-henry-white-nathan-feddo" class="container artist content-block">
-              <img class="artist-picture" src="img/UD_HWNF.png">
+              <img class="artist-picture" src="img/UD_HWNF.png" alt="Henry White & Nathan Feddo">
               <div class="artist-about">
                 <header class="artist-header">
                   <h1 class="font-neue font-underline">Henry White & Nathan Feddo</h1>
@@ -172,7 +176,7 @@
 
             <!-- James Dextrous -->
             <article id="artist-james-dextrous" class="container artist content-block">
-              <img class="artist-picture" src="img/UD_James_Dextrous.png">
+              <img class="artist-picture" src="img/UD_James_Dextrous.png" alt="James Dextrous">
               <div class="artist-about">
                 <header class="artist-header">
                   <h1 class="font-neue font-underline">James Dexterous</h1>
@@ -216,7 +220,7 @@
 
             <!-- Paddy Conn -->
           <article id="artist-paddy-conn" class="container artist content-block">
-            <img class="artist-picture" src="img/UD_Paddy_Conn.png">
+            <img class="artist-picture" src="img/UD_Paddy_Conn.png" alt="Paddy Conn">
             <div class="artist-about">
               <header class="artist-header">
                 <h1 class="font-neue font-underline">Paddy Conn</h1>
@@ -260,7 +264,7 @@
 
             <!-- Dialate -->
             <article id="artist-dialate" class="container artist content-block">
-              <img class="artist-picture" src="img/UD_Dialate.png">
+              <img class="artist-picture" src="img/UD_Dialate.png" alt="Dialate">
               <div class="artist-about">
                 <header class="artist-header">
                   <h1 class="font-neue font-underline">Dialate</h1>
@@ -293,10 +297,10 @@
                   </audio>
                   <div class="social-buttons">
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com')">
-                      <img src="svg/FB_LOGO.svg" /> <span class="button-share-text">Share</span>
+                      <img src="svg/FB_LOGO.svg" alt="Facebook" /> <span class="button-share-text">Share</span>
                     </a>
                     <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com')">
-                      <img src="svg/TW_LOGO.svg" /> <span class="button-share-text">Tweet</span>
+                      <img src="svg/TW_LOGO.svg" alt="Twitter" /> <span class="button-share-text">Tweet</span>
                     </a>
                   </div>
                 </div>
@@ -308,7 +312,7 @@
               <div class="container">
                 <header class="font-align-center">
                   <h1>
-                    <a href="http://www.audionetwork.com/content/our-music/undiscovered"><img src="svg/UD_SERIES_LOGO.svg" align="The Undiscovered Series" /></a>
+                    <a href="http://www.audionetwork.com/content/our-music/undiscovered"><img src="svg/UD_SERIES_LOGO.svg" alt="The Undiscovered Series" /></a>
                   </h1>
                 </header>
 
