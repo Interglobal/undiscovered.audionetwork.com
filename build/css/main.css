@@ -445,7 +445,7 @@ input {
 }
 .artist-music {
   max-width: 55.6%;
-  padding: 0 40px;
+  padding: 0 40px 110px 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -551,7 +551,6 @@ input {
   padding-top: 150px;
 }
 #footer .container {
-  max-width: 860px;
   padding: 0 20px;
 }
 #more-undiscovered {
@@ -560,7 +559,7 @@ input {
 #more-undiscovered li {
   max-width: 50%;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 0.5em;
   float: right;
 }
 #more-undiscovered li:nth-child(odd) {
@@ -574,11 +573,6 @@ input {
     list-style: none;
     display: block;
   }
-  #more-undiscovered img {
-    max-width: 192px;
-  }
-}
-@media only screen and (min-width: 840px) {
   #more-undiscovered {
     display: -webkit-box;
     display: -webkit-flex;
@@ -590,17 +584,12 @@ input {
             justify-content: space-between;
   }
   #footer-content {
-    font-size: 0.9rem;
-    max-width: 680px;
-    margin: 0 auto;
     border-top: 2px solid #fff;
     padding: 35px 0;
   }
   #footer-content > * {
     max-width: 100%;
   }
-}
-@media only screen and (min-width: 840px) {
   #footer-content {
     display: -webkit-box;
     display: -webkit-flex;
