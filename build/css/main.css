@@ -516,7 +516,7 @@ input {
 .artist-song h4:before {
   display: block;
   background: #002d59;
-  content: 'Preview Featured Track';
+  content: 'Play Featured Track';
   position: absolute;
   top: 0;
   left: 0;
@@ -536,11 +536,11 @@ input {
           transition: all 200ms;
 }
 .player-text-container {
-  width: 87%;
+  width: 69%;
   margin-right: 2%;
 }
 .social-buttons {
-  display: none;
+  width: 18%;
   text-align: right;
 }
 .social-buttons .button-share:first-child {
