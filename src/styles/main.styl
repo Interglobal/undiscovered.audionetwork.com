@@ -5,7 +5,7 @@ $gray = #7f8285
 $blue = #002d59
 
 $margin-basic = 25px
-$height-nav-main = 100px
+$height-nav-main = 135px
 
 // RESET
 
@@ -190,8 +190,14 @@ input
 
 #logo-undiscovered-subheading
   padding: 0.7em 1em
+  margin-bottom: 1.25em
   border: 1px solid white
   display: inline-block
+
+.listen-full
+  display: inline-block
+  padding-bottom: 0.25em
+  border-bottom: 1px solid white
 
 #header-bottom
   z-index: 999
@@ -212,8 +218,7 @@ input
 // NAV AFTER HEADER
 
 #nav-main
-  display: flex
-  justify-content: center
+  display: block
   width: 100%
   height: $height-nav-main
   position: fixed
@@ -232,10 +237,19 @@ input
 #nav-main.show
   transform: translateY(0)
 
+#nav-main-top
+  display: flex
+  justify-content: center
+  width: 100%
+
+#nav-main-bottom
+  text-align: center
+
 .nav-main-block
   width: 33.333%
   box-sizing: border-box
   padding: ($margin-basic/2)
+  padding-bottom: 0
 
 #nav-main-social
   width: 161px
@@ -549,7 +563,7 @@ input
 @media only screen and (max-width: 600px)
 
   $margin-basic = 16px
-  $height-nav-main = 84px
+  $height-nav-main = 135px
 
   #nav-main
     height: $height-nav-main
@@ -602,12 +616,13 @@ input
       display: none
 
   #logo-undiscovered-subheading
-    font-size: 1.9em
     padding: .4em .7em .6em .7em
 
   #header
     .logo-audionetwork
       max-width: 100px
+    h2
+      font-size: 1.9em
 
   #header-number
     font-size: 3em

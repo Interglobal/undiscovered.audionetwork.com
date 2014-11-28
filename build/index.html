@@ -53,46 +53,51 @@
         </div>
 
         <nav id="nav-main">
-          <div class="nav-main-block font-align-left">
-            <a href="http://www.audionetwork.com/">
-              <img src="svg/AN_LOGO_GRAY.svg" class="logo-audionetwork" alt="Audio Network" />
-            </a>
-          </div>
-          <div class="nav-main-block font-align-center">
-            <img src="svg/UD_LOGO_GRAY.svg" class="logo-undiscovered" alt="Undiscovered"/>
-          </div>
-          <div class="nav-main-block font-align-right">
-            <div id="nav-main-social">
-              <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com/')">
-                <img src="svg/FB_LOGO.svg" alt="Facebook" /> <span class="button-share-text">Share</span>
+          <div id="nav-main-top">
+            <div class="nav-main-block font-align-left">
+              <a href="http://www.audionetwork.com/">
+                <img src="svg/AN_LOGO_GRAY.svg" class="logo-audionetwork" alt="Audio Network" />
               </a>
-              <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com/')">
-                <img src="svg/TW_LOGO.svg" alt="Twitter" /> <span class="button-share-text">Tweet</span>
-              </a>
-              <span class="mail-signup-mobile-trigger u-pointer js-mobile-mail-trigger"><img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/></span>
-              <div class="mail-signup font-neue font-uppercase">
-                <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
-    						  <input type="hidden" name="thx" value="http://undiscovered.audionetwork.com#success" />
-                  <input type="hidden" name="err" value="http://undiscovered.audionetwork.com#failure" />
-                  <input type="hidden" name="MID" value="6217750" />
-                  <input type="hidden" name="Email Type" value="HTML"/>
-    					    <input type="hidden" name="SubAction" value="sub_add_update"/>
-    					    <input type="email" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
-                  <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
-    					</form>
+            </div>
+            <div class="nav-main-block font-align-center">
+              <img src="svg/UD_LOGO_GRAY.svg" class="logo-undiscovered" alt="Undiscovered"/>
+            </div>
+            <div class="nav-main-block font-align-right">
+              <div id="nav-main-social">
+                <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onFB('http://undiscovered.audionetwork.com/')">
+                  <img src="svg/FB_LOGO.svg" alt="Facebook" /> <span class="button-share-text">Share</span>
+                </a>
+                <a class="button-share font-neue font-uppercase u-pointer" onclick="share.onTW('http://undiscovered.audionetwork.com/')">
+                  <img src="svg/TW_LOGO.svg" alt="Twitter" /> <span class="button-share-text">Tweet</span>
+                </a>
+                <span class="mail-signup-mobile-trigger u-pointer js-mobile-mail-trigger"><img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/></span>
+                <div class="mail-signup font-neue font-uppercase">
+                  <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
+      						  <input type="hidden" name="thx" value="http://undiscovered.audionetwork.com#success" />
+                    <input type="hidden" name="err" value="http://undiscovered.audionetwork.com#failure" />
+                    <input type="hidden" name="MID" value="6217750" />
+                    <input type="hidden" name="Email Type" value="HTML"/>
+      					    <input type="hidden" name="SubAction" value="sub_add_update"/>
+      					    <input type="email" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
+                    <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
+      					</form>
+                </div>
               </div>
             </div>
+            <div class="mail-signup-mobile">
+              <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
+      						  <input type="hidden" name="thx" value="undiscovered.audionetwork.com#success" />
+                    <input type="hidden" name="err" value="undiscovered.audionetwork.com#failure" />
+                    <input type="hidden" name="MID" value="6217750" />
+                    <input type="hidden" name="Email Type" value="HTML"/>
+      					    <input type="hidden" name="SubAction" value="sub_add_update"/>
+      					    <input type="email" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
+                    <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
+      				</form>
+            </div>
           </div>
-          <div class="mail-signup-mobile">
-            <form action="http://cl.s6.exct.net/subscribe.aspx?lid=5052" name="subscribeForm" method="post">
-    						  <input type="hidden" name="thx" value="undiscovered.audionetwork.com#success" />
-                  <input type="hidden" name="err" value="undiscovered.audionetwork.com#failure" />
-                  <input type="hidden" name="MID" value="6217750" />
-                  <input type="hidden" name="Email Type" value="HTML"/>
-    					    <input type="hidden" name="SubAction" value="sub_add_update"/>
-    					    <input type="email" name="Email Address" placeholder="Sign up for updates" class="js-input"/>
-                  <img src="svg/MAIL_LOGO.svg" class="js-submit u-pointer" alt="Submit"/>
-    				</form>
+          <div id="nav-main-bottom">
+            <h3 class="font-geogrot"><a href="http://www.audionetwork.com/production-music/album/undiscovered-4_2235.aspx">Listen to the full album here ></a></h3>
           </div>
         </nav>
 
@@ -116,6 +121,8 @@
             <div id="header-middle">
               <h1><img src="svg/UD_LOGO_MAIN.svg" id="logo-undiscovered" alt="Undiscovered" /></h1>
               <h2 id="logo-undiscovered-subheading" class="font-geogrot">Delivering the brightest new talent</h2>
+              <br/>
+              <h2 class="listen-full font-geogrot"><a href="http://www.audionetwork.com/production-music/album/undiscovered-4_2235.aspx">Listen to the full album here ></a></h2>
             </div>
 
 
@@ -327,7 +334,7 @@
                     <a href="http://www.audionetwork.com/content/our-music/undiscovered/003"><img src="img/Undiscovered_003_360x360.png" alt="Undiscovered #001" /></a>
                   </li>
                   <li>
-                    <a href="http://www.audionetwork.com/content/our-music/undiscovered/004"><img src="img/Undiscovered_004_360x360.png" alt="Undiscovered #001" /></a>
+                    <a href="http://www.audionetwork.com/production-music/album/undiscovered-4_2235.aspx"><img src="img/Undiscovered_004_360x360.png" alt="Undiscovered #001" /></a>
                   </li>
                 </ul>
 
