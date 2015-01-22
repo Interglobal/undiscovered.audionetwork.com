@@ -3,9 +3,14 @@
 $yellow = #fbc61f
 $gray = #7f8285
 $blue = #002d59
+$purple = rgb(61,18,72)
 
 $margin-basic = 25px
-$height-nav-main = 135px
+
+// $height-nav-main = 135px
+$height-nav-main = 93px
+// $height-nav-mobile = 135px
+$height-nav-mobile = 93px
 
 // RESET
 
@@ -163,7 +168,7 @@ input
   margin: 0 auto
 
 .background
-  background-image: url(../img/UD_BG.png)
+  background-image: url(../img/UD_005_BG_1600x1200.png)
   background-position: center center
   background-size: cover
   color: white
@@ -187,6 +192,11 @@ input
   max-width: 85%
   margin: 0 auto
   text-align: center
+
+// #audio-network-presents
+
+#logo-undiscovered
+  padding: 0.7em 0
 
 #logo-undiscovered-subheading
   padding: 0.7em 1em
@@ -375,7 +385,7 @@ input
 
 .artist-song
   position: relative
-  background: $blue
+  background: $purple
   padding: 0 20px
   height: 89px
   display: flex;
@@ -408,7 +418,7 @@ input
 
     &:before
       display: block
-      background: #002d59
+      background: $purple
       content: 'Play Featured Track'
       position: absolute
       top: 0
@@ -499,10 +509,10 @@ input
 
 // RESPONSIVE
 
-@media only screen and (min-width: 1400px)
-
-  .background
-    background-image: url(../img/UD_BG_large.png)
+// @media only screen and (min-width: 1400px)
+//
+//   .background
+//     background-image: url(../img/UD_BG_large.png)
 
 @media only screen and (max-width: 1000px)
 
@@ -563,10 +573,9 @@ input
 @media only screen and (max-width: 600px)
 
   $margin-basic = 16px
-  $height-nav-main = 135px
 
   #nav-main
-    height: $height-nav-main
+    height: $height-nav-mobile
     .nav-main-block
       width: 60%
       &:first-child
@@ -579,7 +588,7 @@ input
     padding: ($margin-basic/2)
 
   .artist
-    padding: ($height-nav-main) 0 60px 0
+    padding: ($height-nav-mobile) 0 60px 0
 
   .artist-song
     padding: 0 15px
@@ -596,7 +605,7 @@ input
       display: none
 
   #footer
-    padding-top: ($height-nav-main*1.5)
+    padding-top: ($height-nav-mobile*1.5)
 
 @media only screen and (max-width: 460px)
 
