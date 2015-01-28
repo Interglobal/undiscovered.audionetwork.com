@@ -307,10 +307,15 @@ input
   li
     padding: 0.5em 0
     text-align: center
+    transition: color: 0.2s
     &.scroll-arrow
       font-size: 0.5em
     &.active
-      color: $yellow
+      color: white
+  &.highlight-yellow
+    li
+      &.active
+        color: $yellow
 
 
 // ARTIST

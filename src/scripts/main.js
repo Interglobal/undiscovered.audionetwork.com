@@ -63,6 +63,7 @@ $(document).ready(function () {
     if (direction === 'up') {
       if ($(this).index() === 1) {
         $('#nav-main').removeClass('show');
+        $('#nav-scroll').removeClass('highlight-yellow');
       }
     }
     if (direction === 'down') {
@@ -73,6 +74,7 @@ $(document).ready(function () {
     if (direction === 'down') {
       if (this.id === 'header') {
         $('#nav-main').addClass('show');
+        $('#nav-scroll').addClass('highlight-yellow');
       }
     }
     if (direction === 'up') {

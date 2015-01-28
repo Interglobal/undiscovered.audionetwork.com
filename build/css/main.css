@@ -394,11 +394,17 @@ input {
 #nav-scroll li {
   padding: 0.5em 0;
   text-align: center;
+  -webkit-transition: color;
+          transition: color;
 }
+#nav-scroll li : 0.2s,
 #nav-scroll li.scroll-arrow {
   font-size: 0.5em;
 }
 #nav-scroll li.active {
+  color: #fff;
+}
+#nav-scroll.highlight-yellow li.active {
   color: #fbc61f;
 }
 .artist {
