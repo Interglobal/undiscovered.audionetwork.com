@@ -523,7 +523,7 @@ input {
 }
 .artist-song h4 {
   color: #fff;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1.2;
   overflow: hidden;
   white-space: nowrap;
@@ -533,7 +533,7 @@ input {
 .artist-song h4:before {
   display: block;
   background: #3d1248;
-  content: 'Play Featured Track';
+  content: 'Preview Featured Track';
   position: absolute;
   top: 0;
   left: 0;
