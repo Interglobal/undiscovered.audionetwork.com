@@ -392,20 +392,20 @@ input {
   font-size: 1em;
 }
 #nav-scroll li {
+  color: #fff;
   padding: 0.5em 0;
   text-align: center;
-  -webkit-transition: color;
-          transition: color;
+  -webkit-transition: color 0.3s;
+          transition: color 0.3s;
 }
-#nav-scroll li : 0.2s,
 #nav-scroll li.scroll-arrow {
   font-size: 0.5em;
 }
 #nav-scroll li.active {
-  color: #fff;
+  color: #fbc61f !important;
 }
-#nav-scroll.highlight-yellow li.active {
-  color: #fbc61f;
+#nav-scroll.color-black li {
+  color: #000;
 }
 .artist {
   display: -webkit-box;
@@ -762,6 +762,7 @@ input {
     display: none;
   }
   #logo-undiscovered-subheading {
+    font-size: 1.1em !important;
     padding: 0.4em 0.7em 0.6em 0.7em;
   }
   #header .logo-audionetwork {
@@ -776,9 +777,7 @@ input {
   #header-arrow {
     display: none;
   }
-}
-@media only screen and (max-width: 320px) {
-  #logo-undiscovered-subheading {
-    font-size: 1.7em;
+  #footer-content {
+    margin-bottom: 25px;
   }
 }

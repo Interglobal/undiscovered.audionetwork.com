@@ -305,17 +305,17 @@ input
   top: 30%
   font-size: 1em
   li
+    color: white
     padding: 0.5em 0
     text-align: center
-    transition: color: 0.2s
+    transition: color 0.3s
     &.scroll-arrow
       font-size: 0.5em
     &.active
-      color: white
-  &.highlight-yellow
+      color: $yellow !important
+  &.color-black
     li
-      &.active
-        color: $yellow
+      color: black
 
 
 // ARTIST
@@ -631,6 +631,7 @@ input
       display: none
 
   #logo-undiscovered-subheading
+    font-size: 1.1em !important
     padding: .4em .7em .6em .7em
 
   #header
@@ -645,8 +646,5 @@ input
   #header-arrow
     display: none
 
-@media only screen and (max-width: 320px)
-
-  #logo-undiscovered-subheading
-    font-size: 1.7em
-
+  #footer-content
+    margin-bottom: $margin-basic

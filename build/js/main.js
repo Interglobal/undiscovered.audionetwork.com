@@ -61,20 +61,28 @@ $(document).ready(function () {
 
   $('.content-block').waypoint(function(direction) {
     if (direction === 'up') {
+
       if ($(this).index() === 1) {
         $('#nav-main').removeClass('show');
-        $('#nav-scroll').removeClass('highlight-yellow');
+        $('#nav-scroll').removeClass('color-black');
+      } else if ($(this).index() === 5) {
+        $('#nav-scroll').addClass('color-black');
       }
     }
     if (direction === 'down') {
+
+      if (this.id === 'footer') {
+        $('#nav-scroll').removeClass('color-black');
+      }
       activeScrollBlock = $(this).index();
     }
     $('.js-scroll').eq($(this).index()).toggleClass('active', direction === 'down');
   }, { offset: '66%' }).waypoint(function(direction) {
     if (direction === 'down') {
+
       if (this.id === 'header') {
         $('#nav-main').addClass('show');
-        $('#nav-scroll').addClass('highlight-yellow');
+        $('#nav-scroll').addClass('color-black');
       }
     }
     if (direction === 'up') {
