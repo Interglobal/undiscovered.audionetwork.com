@@ -584,7 +584,7 @@ input {
   margin-bottom: 30px;
 }
 #more-undiscovered li {
-  max-width: 50%;
+  max-width: 20%;
   box-sizing: border-box;
   padding: 0.5em;
   float: right;
@@ -599,16 +599,6 @@ input {
   #more-undiscovered {
     list-style: none;
     display: block;
-  }
-  #more-undiscovered {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   #footer-content {
     border-top: 2px solid #fff;
@@ -741,6 +731,9 @@ input {
   }
   #footer {
     padding-top: 120px;
+  }
+  #more-undiscovered li {
+    max-width: 50%;
   }
 }
 @media only screen and (max-width: 460px) {
