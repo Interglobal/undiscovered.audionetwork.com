@@ -249,6 +249,7 @@ input {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #3d1248;
 }
 #header .logo-audionetwork {
   height: 90px;
@@ -430,7 +431,6 @@ input {
   position: absolute;
   top: 93px;
   right: 0;
-  z-index: -1;
   max-width: 100%;
   height: auto;
 }
@@ -439,6 +439,7 @@ input {
 }
 .artist-about,
 .artist-music {
+  z-index: 1;
   box-sizing: border-box;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
