@@ -588,9 +588,6 @@ input {
   max-width: 20%;
   box-sizing: border-box;
   padding: 0.5em;
-  float: right;
-}
-#more-undiscovered li:nth-child(odd) {
   float: left;
 }
 #more-undiscovered img {
