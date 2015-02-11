@@ -434,12 +434,15 @@ input {
   max-width: 100%;
   height: auto;
 }
+.ie10 .artist-picture {
+  z-index: -1;
+}
 .artist:nth-child(even) .artist-picture {
   left: 0;
 }
 .artist-about,
 .artist-music {
-  z-index: 1;
+  z-index: 999;
   box-sizing: border-box;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
