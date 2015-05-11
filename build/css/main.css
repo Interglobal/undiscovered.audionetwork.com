@@ -475,7 +475,7 @@ input {
 }
 .artist-music {
   max-width: 55.6%;
-  padding: 0 40px 110px 40px;
+  padding: 0 40px 20px 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
