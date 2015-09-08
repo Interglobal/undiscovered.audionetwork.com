@@ -225,7 +225,7 @@ input {
   margin: 0 auto;
 }
 .background {
-  background-image: url("../img/UD_BG_006_1600x1200.png");
+  background-image: url("../img/UD_BG.png");
   background-position: center center;
   background-size: cover;
   color: #fff;
@@ -697,6 +697,9 @@ input {
   }
 }
 @media only screen and (max-width: 600px) {
+  .background {
+    background-image: url("../img/UD_BG_small.png");
+  }
   #nav-main {
     height: 135px;
   }
