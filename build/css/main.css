@@ -249,7 +249,7 @@ input {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #7b0227;
+  background-color: #c92127;
 }
 #header .logo-audionetwork {
   height: 90px;
@@ -502,7 +502,7 @@ input {
 }
 .artist-song {
   position: relative;
-  background: #7b0227;
+  background: #c92127;
   padding: 0 20px;
   height: 89px;
   display: -webkit-box;
@@ -545,7 +545,7 @@ input {
 }
 .artist-song h4:before {
   display: block;
-  background: #7b0227;
+  background: #c92127;
   content: 'Play Featured Track';
   position: absolute;
   z-index: 1;
